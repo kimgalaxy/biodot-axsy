@@ -735,8 +735,13 @@ td .yes,td .no{font-size:15px}
 .site-nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 28px;background:#fff;border-bottom:1px solid var(--line);font-size:12px}.site-nav a{text-decoration:none;border:1px solid var(--line);border-radius:7px;padding:8px 12px;color:var(--navy-800);font-weight:650}.site-nav .home-link{background:var(--navy-50)}.site-links{display:flex;gap:7px;flex-wrap:wrap}.site-nav a[aria-current="page"]{background:var(--navy-900);border-color:var(--navy-900);color:#fff}.site-nav a:focus-visible{outline:3px solid #7da2e6;outline-offset:3px}@media screen and (max-width:560px){.site-nav{padding:10px 12px;flex-wrap:wrap;gap:8px}.site-nav a{padding:7px 9px;font-size:11px}.site-links{gap:5px}}@media print{.site-nav{display:none}}
 
 /* Comparable build estimate: public middle-tier prices, with explicit quantities. */
-.build-price-pair{display:flex;flex-wrap:wrap;gap:20px 44px;align-items:flex-start;margin:12px 0}.price-label{display:block;font-size:13px;font-weight:700;color:var(--ink-3);margin-bottom:5px}.market-estimate{padding-left:25px;border-left:1px solid var(--line)}.market-estimate .price{color:var(--navy-700)}.estimate-context{display:block;font-size:11px;line-height:1.6;color:var(--ink-3);margin-top:5px}.market-estimate a{display:inline-block;font-size:12px;margin-top:5px}.scope-estimates{min-width:700px}.feature-estimate small,.module-estimate small{display:block;font-size:11px;line-height:1.6;color:var(--ink-3);margin-top:5px;white-space:normal}.feature-estimate{width:26%}.module-estimate>b{font-size:17px;color:var(--navy-800)}
+.build-price-pair{display:flex;flex-wrap:wrap;gap:20px 44px;align-items:flex-start;margin:12px 0}.price-label{display:block;font-size:13px;font-weight:700;color:var(--ink-3);margin-bottom:5px}.market-estimate{padding-left:25px;border-left:1px solid var(--line)}.market-estimate .price{color:var(--navy-700)}.estimate-context{display:block;font-size:11px;line-height:1.6;color:var(--ink-3);margin-top:5px}.market-estimate a{display:inline-block;font-size:12px;margin-top:5px}.scope-table{min-width:480px}.module-estimate small{display:block;font-size:11px;line-height:1.6;color:var(--ink-3);margin-top:5px;white-space:normal}.module-estimate>b{font-size:17px;color:var(--navy-800)}
 @media screen and (max-width:600px){.build-price-pair{gap:16px}.market-estimate{padding:14px 0 0;border-left:0;border-top:1px solid var(--line);width:100%}.market-estimate .price{font-size:27px}}
+
+/* Native disclosures keep the summaries visible and detailed tables optional. */
+.detail-panel{margin-top:16px;border:1px solid var(--line);border-radius:14px;background:#fff;overflow:hidden}.detail-panel>summary{list-style:none;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:19px 22px;cursor:pointer;background:var(--navy-50)}.detail-panel>summary::-webkit-details-marker{display:none}.detail-panel>summary:focus-visible{outline:3px solid #7096d9;outline-offset:-4px}.detail-copy{display:grid;gap:6px;min-width:0}.detail-copy strong{font-size:16px;color:var(--navy-900)}.detail-copy>span{font-size:13px;color:var(--ink-3);line-height:1.6}.detail-action{display:inline-flex;align-items:center;gap:10px;flex:none;padding:10px 15px;background:var(--navy-800);color:#fff;border-radius:8px;font-size:13px;font-weight:700}.detail-action i{font-style:normal;font-size:18px;line-height:1;transition:transform .15s}.detail-panel .when-open{display:none}.detail-panel[open] .when-open{display:inline}.detail-panel[open] .when-closed{display:none}.detail-panel[open] .detail-action i{transform:rotate(180deg)}.detail-panel[open]>summary{border-bottom:1px solid var(--line)}.detail-content{padding:20px}.detail-content>h3:first-child{margin-top:0}.detail-content .tbl-wrap{max-width:100%}
+#marketDetails>summary{justify-content:flex-start;gap:14px}#marketDetails .detail-action{background:#dc2626}#marketDetails>summary:hover .detail-action{background:#b91c1c}
+@media screen and (max-width:600px){.detail-panel>summary{padding:16px;gap:12px;flex-wrap:wrap}.detail-action{padding:9px 13px}.detail-content{padding:14px}.detail-copy strong{font-size:15px}}
 </style>
 </head>
 <body>
@@ -750,8 +755,10 @@ td .yes,td .no{font-size:15px}
     <a href="#overview"><span class="n">01</span>개요</a>
     <a href="#goals"><span class="n">02</span>구축 범위 · 목표</a>
     <a href="#packages"><span class="n">03</span>Full 구축 범위</a>
+    <a href="#quote"><span class="n">20</span>견적 · 크몽 비교</a>
     <a href="#agents"><span class="n">04</span>AI 직원</a>
     <a href="#opex"><span class="n">21</span>운영비 · ROAS</a>
+    <a href="#gantt"><span class="n">22</span>간트차트</a>
     <a href="#talk"><span class="n">↳</span>AI 직원과 소통</a>
     <a href="#work"><span class="n">05</span>해야 할 일 → 구현</a>
     <a href="#arch"><span class="n">06</span>기술 아키텍처</a>
@@ -771,8 +778,6 @@ td .yes,td .no{font-size:15px}
     <a href="#test"><span class="n">17</span>모델 테스트</a>
     <a href="#plan"><span class="n">18</span>실행 계획서</a>
     <a href="#wbs"><span class="n">19</span>상세 내역서</a>
-    <a href="#quote"><span class="n">20</span>견적 · 크몽 비교</a>
-    <a href="#gantt"><span class="n">22</span>간트차트</a>
     <a href="#law"><span class="n">23</span>규제 대응</a>
     <a href="#risk"><span class="n">24</span>리스크 · 보완</a>
     <a href="#coverage"><span class="n">25</span>요구사항 체크</a>
@@ -901,9 +906,22 @@ td .yes,td .no{font-size:15px}
 <section id="packages">
   <div class="sec-head"><div><div class="eyebrow">03 · Full Scope</div><h2>Full 구성 — AI 직원 36명과 전체 운영 시스템</h2></div><span class="chip">구축 제안가: 가격협의</span></div>
   <div id="pkgCards" style="margin-top:14px"></div>
-  <div class="tbl-wrap" style="margin-top:16px"><table class="scope-estimates"><thead><tr><th>구축 기능</th><th class="c">Full 포함 범위</th><th class="num">크몽 추산가 · 배분</th></tr></thead><tbody id="pkgMatrix"></tbody><tfoot><tr class="total"><td colspan="2">크몽 중간 가격 기준 참고 합계</td><td class="num" id="scopeMarketTotal"></td></tr></tfoot></table></div>
-  <p class="note">구축 제안가는 <b>가격협의</b>입니다. 기능·납품물·계정 권한·검수 기준을 확정한 뒤 총액과 지급 조건을 합의합니다. 월 비용은 AI·인프라 실비 약 70~90만원의 예산안이며, 광고비·협찬·인플루언서 수수료·제품 제공·촬영은 별도입니다. 크몽 추산가는 공개 상품의 <b>중간 구성(DELUXE)</b>과 가정 수량을 적용한 참고 합계입니다. 세부 기능에는 묶음 비용을 배분해 중복 합산을 피했습니다. 별도 공통 기획·점검 비용도 포함합니다. <a href="#quote">20장의 산식·원문</a>에서 확인하세요. 실제 Full 동일 범위의 확정 외주 견적은 아니며, 통합 개발·검수·VAT·추가 직무 설정은 별도 협의가 필요합니다.</p>
+  <details class="detail-panel" id="scopeDetails"><summary><span class="detail-copy"><strong>Full 구축 기능 상세 내역</strong><span>자세한 내역을 보기 원하시면 클릭 해주세요.</span></span><span class="detail-action"><span class="when-closed">자세히 보기</span><span class="when-open">접기</span><i aria-hidden="true">⌄</i></span></summary><div class="detail-content"><div class="tbl-wrap"><table class="scope-table"><thead><tr><th>구축 기능</th><th class="c">Full 포함 범위</th></tr></thead><tbody id="pkgMatrix"></tbody></table></div></div></details>
+  <p class="note">구축 제안가는 <b>가격협의</b>입니다. 기능·납품물·계정 권한·검수 기준을 확정한 뒤 총액과 지급 조건을 합의합니다. 월 비용은 AI·인프라 실비 약 70~90만원의 예산안이며, 광고비·협찬·인플루언서 수수료·제품 제공·촬영은 별도입니다. 크몽 추산가는 공개 상품의 <b>중간 구성(DELUXE)</b>과 가정 수량을 적용한 참고 합계입니다. 별도 공통 기획·점검 비용도 포함합니다. <a href="#quote">20장의 산식·원문</a>에서 확인하세요. 실제 Full 동일 범위의 확정 외주 견적은 아니며, 통합 개발·검수·VAT·추가 직무 설정은 별도 협의가 필요합니다.</p>
   <div class="card" style="margin-top:16px"><h3>처음 납품하는 것과 오픈 후 확장</h3><div class="grid g2"><div><span class="ph ph1">2027.4.30까지 · Full 구축</span><p style="font-size:13px;margin-top:8px">사이트·회원·대시보드·약국 관제·CRM·상담·부서 비서·광고 직원·콘텐츠 도구·데이터 연동을 납품합니다. AI 직무 36개를 모두 설정하되 초기 실행량은 월 실비 예산에 맞춰 예약·순차 운영합니다.</p></div><div><span class="ph ph3">오픈 후 · 추가 범위 협의</span><p style="font-size:13px;margin-top:8px">앱·게임·하이브리드 RAG·진행 중 전화의 실시간 지시와 상담원 연결·유튜브 롱폼·펫 전담 에디터·방문 예측 고도화는 후속 개발입니다.</p></div></div><p class="note">랜딩 10종은 공통 템플릿에 채널·브랜드·SKU별 문구와 이미지를 적용한 변형입니다.</p></div>
+</section>
+
+<!-- ================= 20 QUOTE ================= -->
+<section id="quote">
+  <div class="sec-head"><div><div class="eyebrow">20 · Full Quotation & Market Examples</div><h2>Full 구축 제안가 · 내역서별 크몽 가격 예시</h2></div><span class="chip">공개 가격 재확인 · 2026.11.04</span></div>
+  <div class="grid g3" style="margin-bottom:16px"><div class="kpi"><div class="lab">Full 구축 제안가</div><div class="val">가격협의</div><div class="sub">AI 직원 36명 · 전체 구축 범위</div></div><div class="kpi"><div class="lab">비교 자료</div><div class="val" id="marketCount"></div><div class="sub">실제 공개 상품과 모듈별 연결</div></div><div class="kpi"><div class="lab">크몽 추산가 · 중간 가격 기준</div><div class="val" style="font-size:26px" id="quoteMarketTotal"></div><div class="sub">가정 수량을 반영한 참고 합산 · 확정 견적은 별도</div></div></div>
+  <p>아래 크몽가는 <b>기능별 외주 가격을 이해하기 위한 실제 공개 상품 예시</b>입니다. Full 구축비는 가격협의로 표시하며, 각 내역에 어떤 비교 상품과 단위가 있는지 보여 줍니다. 중간 구성 단가에 가정 수량을 적용해 모듈별 참고 추산가를 계산했습니다. 작은 단위의 상품만 구매해 Full 전체가 완성된다는 의미는 아닙니다. 기획·회원·관리자·CRM·AI 기반은 분리 발주를 가정했고, 판매자의 실제 견적에 공통 기능이 겹치면 차감해야 합니다.</p>
+  <details class="detail-panel" id="marketDetails"><summary><span class="detail-copy"><strong>내역서별 크몽가 · 관련 상품 및 상세 가격</strong><span>자세한 내역을 보기 원하시면 클릭 해주세요.</span></span><span class="detail-action"><span class="when-closed">자세히 보기</span><span class="when-open">접기</span><i aria-hidden="true">⌄</i></span></summary><div class="detail-content"><h3>① Full 내역서별 크몽가 · 관련 상품</h3>
+  <div class="tbl-wrap"><table style="table-layout:fixed;min-width:900px"><thead><tr><th style="width:17%">코드 · 구축 내역</th><th style="width:29%">Full 납품 범위</th><th style="width:29%">관련 크몽 공개가 예시</th><th style="width:25%">크몽 추산가 · 산식</th></tr></thead><tbody id="quoteBody"></tbody><tfoot><tr class="total"><td colspan="3">중간 가격 기준 참고 합계</td><td class="num" id="detailMarketTotal"></td></tr></tfoot></table></div>
+  <p class="note">표의 가격은 크몽 판매자가 공개한 구성별 표시가격입니다. 상품별 VAT·결제 수수료·월 구독·API 사용료·유지보수 조건은 다릅니다. 가격·지원 범위는 원문에서 확인하고 동일 요구사항으로 총액을 협의합니다. 별도 연락·개별 견적 수령 없이 공개 정보만 조사했습니다.</p>
+  <h3 style="margin-top:22px">② 공개 상품 상세 · 단위와 포함 범위</h3>
+  <div class="tbl-wrap market-table" tabindex="0" role="region" aria-label="크몽 공개 가격 및 단위 비교"><table><thead><tr><th>분야 · 상품</th><th>공개가 (기본 / 확장 / 상위)</th><th>해당 가격의 단위·범위</th><th>Full과 비교할 때 확인할 것</th></tr></thead><tbody id="marketBody"></tbody></table></div>
+  <div class="callout info" style="margin-top:16px"><span class="ic">↔</span><div><b>36명 × 외주 단가로 계산하지 않습니다.</b> AI 직원은 공통 실행 기반에 직무별 프롬프트·권한·도구를 설정하는 구조입니다. 웹·회원·DB·관리자·챗봇에 포함되는 공통 기능도 한 번만 산정하고, 통합·오류 복구·테스트·소스 인계까지 같은 명세로 가격협의합니다.</div></div></div></details>
 </section>
 
 <!-- ================= 04 AGENTS ================= -->
@@ -1001,6 +1019,31 @@ td .yes,td .no{font-size:15px}
     </div>
   </div>
 
+</section>
+
+<!-- ================= 22 GANTT ================= -->
+<section id="gantt">
+  <div class="sec-head"><div><div class="eyebrow">22 · Schedule</div><h2>간트차트 — 2026.11.9 착수 ~ 2027.4.30 오픈 (25주)</h2></div><div class="legend" id="ganttLegend"></div></div>
+  <div class="gantt-wrap"><div class="gantt" id="ganttEl"></div></div>
+  <p class="note">위쪽 띠는 계약 단계입니다: <b>1차(11/9~12/31) 결과물 확인</b> → 12/31 보고회에서 판단 → <b>2차(1/4~2/26) 설 시즌 운영 · 기능 확장</b> → <b>3차(3/2~4/30) 시범 운영 · 정식 오픈</b>. 빗금 칸은 공휴일이 있는 주입니다 (12/25 · 1/1 · 설 2/8~2/9 · 3/1). 2027년 설 연휴는 2/6~2/9이므로 설 선물 공동구매·기획전은 1차 결과물로 1월에 운영합니다. 방문 패턴 예측은 1~2월 실사 데이터가 8주 이상 쌓인 뒤 3월에 시작합니다. 이카운트 실제 키는 테스트 키 검증(2주 유효) 후 발급되므로 W1에 바로 신청합니다. 계약이 1주 늦어지면 일정도 1주 늦어집니다. 표가 넓으니 좌우로 스크롤하고, 막대 위에 마우스를 올리면 기간이 보입니다.</p>
+  <div class="grid g4" style="margin-top:12px">
+    <div class="kpi"><div class="lab">◆ M1 · 11/13 (금)</div><div class="val" style="font-size:16px">기획 · 설계 확정</div><div class="sub">요구사항, 상담·SKU MD, DB 설계, 위험 신호 규칙 초안</div></div>
+    <div class="kpi"><div class="lab">◆ M2 · 12/11 (금)</div><div class="val" style="font-size:16px">사이트 베타 + 약국 관제</div><div class="sub">채팅 상담·Admin 열람, 목표 약국 지도, 이카운트 재고 연동</div></div>
+    <div class="kpi"><div class="lab">◆ M3 · 12/24 (목)</div><div class="val" style="font-size:16px">AI 직원 가동 · 파일럿</div><div class="sub">약국 3곳 실사 · 위험 알림 · 인플루언서 접촉 · 소액 광고</div></div>
+    <div class="kpi" style="border:1px solid var(--line)"><div class="lab">◆ M4 · 12/31 (목) · 판단 시점</div><div class="val" style="font-size:16px">1차 결과 보고회</div><div class="sub">결과물·지표 확인 → 계속 / 조정 / 멈춤 결정</div></div>
+    <div class="kpi"><div class="lab">◆ M5 · 1/29 (금) · 2차</div><div class="val" style="font-size:16px">설 시즌 캠페인 운영</div><div class="sub">공동구매·기획전 · 카카오 채널 상담 안정화</div></div>
+    <div class="kpi"><div class="lab">◆ M6 · 2/26 (금) · 2차</div><div class="val" style="font-size:16px">전 기능 통합 · 2차 검수</div><div class="sub">경영지원 비서 · 결론 엔진 v1 · 전화 상담 · 레거시 백업 · 영상</div></div>
+    <div class="kpi"><div class="lab">◆ M7 · 3/31 (수) · 3차</div><div class="val" style="font-size:16px">방문 예측 v1 · 중간 점검</div><div class="sub">실사 8주 데이터 기반 예측 · 시범 운영 개선 목록</div></div>
+    <div class="kpi"><div class="lab">◆ M8 · 4/30 (금) · 3차</div><div class="val" style="font-size:16px">정식 오픈 · 최종 인수</div><div class="sub">4/26~4/29 오픈 리허설 · 운영 교육 · 인수인계</div></div>
+  </div>
+  <div class="card" style="margin-top:16px">
+    <h3>오픈 후 로드맵 (3단계 · 별도 범위·견적 합의)</h3>
+    <div class="grid g3">
+      <div><span class="ph ph3">2027년 5~6월</span><ul class="clean" style="font-size:13px"><li>건강관리 앱 MVP (상담 엔진 · 간단한 건강 습관 게임)</li><li>전화 상담 실시간 개입 · 상담원·약사 연결</li><li>상담 게임 · 하이브리드 RAG</li><li>유튜브 롱폼 제작 파이프라인</li></ul></div>
+      <div><span class="ph ph3">2027 Q3</span><ul class="clean" style="font-size:13px"><li>방문 예측 고도화 · 약국 간 재배치 추천</li><li>프롬디어펫 전담 펫 에디터 · 반려 커뮤니티 확장</li><li>광고 소재 자동 생성 → 성과 기반 자동 교체</li></ul></div>
+      <div><span class="ph ph3">2027 Q4 이후</span><ul class="clean" style="font-size:13px"><li>B2B 원료·OEM 문의 상담 · 영업 자동화</li><li>추석 선물 시즌 캠페인 자동화</li><li>상담·판매 데이터 기반 신제품 기획 지원</li></ul></div>
+    </div>
+  </div>
 </section>
 
 <!-- ================= 04-1 TALK ================= -->
@@ -2032,46 +2075,11 @@ mcp_servers:
   </div>
 </section>
 
-<!-- ================= 16 QUOTE ================= -->
-<section id="quote">
-  <div class="sec-head"><div><div class="eyebrow">20 · Full Quotation & Market Examples</div><h2>Full 구축 제안가 · 내역서별 크몽 가격 예시</h2></div><span class="chip">공개 가격 재확인 · 2026.11.04</span></div>
-  <div class="grid g3" style="margin-bottom:16px"><div class="kpi"><div class="lab">Full 구축 제안가</div><div class="val">가격협의</div><div class="sub">AI 직원 36명 · 전체 구축 범위</div></div><div class="kpi"><div class="lab">비교 자료</div><div class="val" id="marketCount"></div><div class="sub">실제 공개 상품과 모듈별 연결</div></div><div class="kpi"><div class="lab">크몽 추산가 · 중간 가격 기준</div><div class="val" style="font-size:26px" id="quoteMarketTotal"></div><div class="sub">가정 수량을 반영한 참고 합산 · 확정 견적은 별도</div></div></div>
-  <p>아래 크몽가는 <b>기능별 외주 가격을 이해하기 위한 실제 공개 상품 예시</b>입니다. Full 구축비는 가격협의로 표시하며, 각 내역에 어떤 비교 상품과 단위가 있는지 보여 줍니다. 중간 구성 단가에 가정 수량을 적용해 모듈별 참고 추산가를 계산했습니다. 작은 단위의 상품만 구매해 Full 전체가 완성된다는 의미는 아닙니다. 기획·회원·관리자·CRM·AI 기반은 분리 발주를 가정했고, 판매자의 실제 견적에 공통 기능이 겹치면 차감해야 합니다.</p>
-  <h3>① Full 내역서별 크몽가 · 관련 상품</h3>
-  <div class="tbl-wrap"><table style="table-layout:fixed;min-width:900px"><thead><tr><th style="width:17%">코드 · 구축 내역</th><th style="width:29%">Full 납품 범위</th><th style="width:29%">관련 크몽 공개가 예시</th><th style="width:25%">크몽 추산가 · 산식</th></tr></thead><tbody id="quoteBody"></tbody><tfoot><tr class="total"><td colspan="3">중간 가격 기준 참고 합계</td><td class="num" id="detailMarketTotal"></td></tr></tfoot></table></div>
-  <p class="note">표의 가격은 크몽 판매자가 공개한 구성별 표시가격입니다. 상품별 VAT·결제 수수료·월 구독·API 사용료·유지보수 조건은 다릅니다. 가격·지원 범위는 원문에서 확인하고 동일 요구사항으로 총액을 협의합니다. 별도 연락·개별 견적 수령 없이 공개 정보만 조사했습니다.</p>
-  <h3 style="margin-top:22px">② 공개 상품 상세 · 단위와 포함 범위</h3>
-  <div class="tbl-wrap market-table" tabindex="0" role="region" aria-label="크몽 공개 가격 및 단위 비교"><table><thead><tr><th>분야 · 상품</th><th>공개가 (기본 / 확장 / 상위)</th><th>해당 가격의 단위·범위</th><th>Full과 비교할 때 확인할 것</th></tr></thead><tbody id="marketBody"></tbody></table></div>
-  <div class="callout info" style="margin-top:16px"><span class="ic">↔</span><div><b>36명 × 외주 단가로 계산하지 않습니다.</b> AI 직원은 공통 실행 기반에 직무별 프롬프트·권한·도구를 설정하는 구조입니다. 웹·회원·DB·관리자·챗봇에 포함되는 공통 기능도 한 번만 산정하고, 통합·오류 복구·테스트·소스 인계까지 같은 명세로 가격협의합니다.</div></div>
-</section>
-
-<!-- ================= 17 OPEX / ROI ================= -->
 
 
-<!-- ================= 18 GANTT ================= -->
-<section id="gantt">
-  <div class="sec-head"><div><div class="eyebrow">22 · Schedule</div><h2>간트차트 — 2026.11.9 착수 ~ 2027.4.30 오픈 (25주)</h2></div><div class="legend" id="ganttLegend"></div></div>
-  <div class="gantt-wrap"><div class="gantt" id="ganttEl"></div></div>
-  <p class="note">위쪽 띠는 계약 단계입니다: <b>1차(11/9~12/31) 결과물 확인</b> → 12/31 보고회에서 판단 → <b>2차(1/4~2/26) 설 시즌 운영 · 기능 확장</b> → <b>3차(3/2~4/30) 시범 운영 · 정식 오픈</b>. 빗금 칸은 공휴일이 있는 주입니다 (12/25 · 1/1 · 설 2/8~2/9 · 3/1). 2027년 설 연휴는 2/6~2/9이므로 설 선물 공동구매·기획전은 1차 결과물로 1월에 운영합니다. 방문 패턴 예측은 1~2월 실사 데이터가 8주 이상 쌓인 뒤 3월에 시작합니다. 이카운트 실제 키는 테스트 키 검증(2주 유효) 후 발급되므로 W1에 바로 신청합니다. 계약이 1주 늦어지면 일정도 1주 늦어집니다. 표가 넓으니 좌우로 스크롤하고, 막대 위에 마우스를 올리면 기간이 보입니다.</p>
-  <div class="grid g4" style="margin-top:12px">
-    <div class="kpi"><div class="lab">◆ M1 · 11/13 (금)</div><div class="val" style="font-size:16px">기획 · 설계 확정</div><div class="sub">요구사항, 상담·SKU MD, DB 설계, 위험 신호 규칙 초안</div></div>
-    <div class="kpi"><div class="lab">◆ M2 · 12/11 (금)</div><div class="val" style="font-size:16px">사이트 베타 + 약국 관제</div><div class="sub">채팅 상담·Admin 열람, 목표 약국 지도, 이카운트 재고 연동</div></div>
-    <div class="kpi"><div class="lab">◆ M3 · 12/24 (목)</div><div class="val" style="font-size:16px">AI 직원 가동 · 파일럿</div><div class="sub">약국 3곳 실사 · 위험 알림 · 인플루언서 접촉 · 소액 광고</div></div>
-    <div class="kpi" style="border:1px solid var(--line)"><div class="lab">◆ M4 · 12/31 (목) · 판단 시점</div><div class="val" style="font-size:16px">1차 결과 보고회</div><div class="sub">결과물·지표 확인 → 계속 / 조정 / 멈춤 결정</div></div>
-    <div class="kpi"><div class="lab">◆ M5 · 1/29 (금) · 2차</div><div class="val" style="font-size:16px">설 시즌 캠페인 운영</div><div class="sub">공동구매·기획전 · 카카오 채널 상담 안정화</div></div>
-    <div class="kpi"><div class="lab">◆ M6 · 2/26 (금) · 2차</div><div class="val" style="font-size:16px">전 기능 통합 · 2차 검수</div><div class="sub">경영지원 비서 · 결론 엔진 v1 · 전화 상담 · 레거시 백업 · 영상</div></div>
-    <div class="kpi"><div class="lab">◆ M7 · 3/31 (수) · 3차</div><div class="val" style="font-size:16px">방문 예측 v1 · 중간 점검</div><div class="sub">실사 8주 데이터 기반 예측 · 시범 운영 개선 목록</div></div>
-    <div class="kpi"><div class="lab">◆ M8 · 4/30 (금) · 3차</div><div class="val" style="font-size:16px">정식 오픈 · 최종 인수</div><div class="sub">4/26~4/29 오픈 리허설 · 운영 교육 · 인수인계</div></div>
-  </div>
-  <div class="card" style="margin-top:16px">
-    <h3>오픈 후 로드맵 (3단계 · 별도 범위·견적 합의)</h3>
-    <div class="grid g3">
-      <div><span class="ph ph3">2027년 5~6월</span><ul class="clean" style="font-size:13px"><li>건강관리 앱 MVP (상담 엔진 · 간단한 건강 습관 게임)</li><li>전화 상담 실시간 개입 · 상담원·약사 연결</li><li>상담 게임 · 하이브리드 RAG</li><li>유튜브 롱폼 제작 파이프라인</li></ul></div>
-      <div><span class="ph ph3">2027 Q3</span><ul class="clean" style="font-size:13px"><li>방문 예측 고도화 · 약국 간 재배치 추천</li><li>프롬디어펫 전담 펫 에디터 · 반려 커뮤니티 확장</li><li>광고 소재 자동 생성 → 성과 기반 자동 교체</li></ul></div>
-      <div><span class="ph ph3">2027 Q4 이후</span><ul class="clean" style="font-size:13px"><li>B2B 원료·OEM 문의 상담 · 영업 자동화</li><li>추석 선물 시즌 캠페인 자동화</li><li>상담·판매 데이터 기반 신제품 기획 지원</li></ul></div>
-    </div>
-  </div>
-</section>
+
+
+
 
 <!-- ================= 19 LAW ================= -->
 <section id="law">
@@ -3092,16 +3100,6 @@ const QUOTE = [
   "refs": [
    761808
   ]
- },
- {
-  "code": "AD",
-  "module": "메타·구글·네이버 광고 매니저",
-  "scope": "계정·전환 진단, 캠페인 빌드업, 3매체별 성과 분석과 승인 후 집행. 매체별 세팅 용역과 AI 직원 구축을 구분.",
-  "refs": [
-   728830,
-   575794,
-   791076
-  ]
  }
 ];
 
@@ -3800,30 +3798,6 @@ const MARKET_ESTIMATES = [
   ],
   "features": [],
   "basis": "중간 구성 29만원 × 보안 점검 1식"
- },
- {
-  "code": "AD",
-  "parts": [
-   [
-    728830,
-    1
-   ],
-   [
-    575794,
-    1
-   ],
-   [
-    791076,
-    1
-   ]
-  ],
-  "features": [
-   [
-    5,
-    1
-   ]
-  ],
-  "basis": "메타 12.9만원 + 구글 8.3만원 + 네이버 14.9만원"
  }
 ];
 
@@ -3837,19 +3811,9 @@ const estimateWon = e => e.parts.reduce((sum,[id,count,unit])=>sum+(unit ?? Numb
 const marketTotal = MARKET_ESTIMATES.reduce((sum,e)=>sum+estimateWon(e),0);
 const estimateMoney = v => (v/10000).toLocaleString("ko-KR",{maximumFractionDigits:1})+"만원";
 const estimateByCode = Object.fromEntries(MARKET_ESTIMATES.map(e=>[e.code,e]));
-const featureEstimate = index => {
-  const e=MARKET_ESTIMATES.find(e=>e.features.some(f=>f[0]===index));
-  if(e){const weight=e.features.find(f=>f[0]===index)[1],sum=e.features.reduce((n,f)=>n+f[1],0);return `<a href="#estimate-${e.code}"><b>${estimateMoney(Math.round(estimateWon(e)*weight/sum))}</b></a><small>${e.code} 묶음 배분${e.code==="I"?" · 공통 AI 기반":""}</small>`;}
-  if(index===30||index===31)return "후속 별도";
-  if(index===32)return "공통 AI 기반에 포함";
-  if(index===33)return `<b>약 ${estimateMoney(marketTotal)}</b><small>아래 참고 합계와 동일 · 중복 합산 없음</small>`;
-  if(index===34)return "구축 추산에서 제외";
-  return "—";
-};
 $("#pkgCards").innerHTML = PKGS.map(p => `<div class="pkg rec" style="--c:${p.c}"><div class="pn">FULL</div><h3>${p.t}</h3><div class="build-price-pair"><div><span class="price-label">구축 제안가</span><div class="price">가격협의</div></div><div class="market-estimate"><span class="price-label">크몽 추산가 · 중간 가격 기준</span><div class="price">약 ${estimateMoney(marketTotal)}</div><a href="#quote">가정 수량·산식 확인 ↗</a><small class="estimate-context">공개 단가 × 가정 수량 · 확정 견적 별도</small></div></div><p class="muted">${p.desc}</p><div class="mini"><div>AI 직원<b>36명</b></div><div>월 실비 예산<b>70~90만원</b></div><div>기준 예산<b>80만원</b></div></div><ul class="clean">${p.inc.map(i=>`<li>${i}</li>`).join("")}</ul></div>`).join("");
-const sharedEstimate=MARKET_ESTIMATES.filter(e=>!e.features.length).reduce((sum,e)=>sum+estimateWon(e),0);
-$("#pkgMatrix").innerHTML = MATRIX.map((r,i) => `<tr><td>${r[0]}</td><td class="c"><b>${r[1]}</b></td><td class="num feature-estimate">${featureEstimate(i)}</td></tr>`).join("")+`<tr><td>공통 기획·화면 설계 / 보안 점검</td><td class="c">전체 구축 공통</td><td class="num feature-estimate"><b>${estimateMoney(sharedEstimate)}</b><small><a href="#estimate-A">A 기획 ${estimateMoney(estimateWon(estimateByCode.A))}</a> · <a href="#estimate-M">M 점검 ${estimateMoney(estimateWon(estimateByCode.M))}</a></small></td></tr>`;
-["scopeMarketTotal","quoteMarketTotal","detailMarketTotal"].forEach(id=>document.getElementById(id).textContent="약 "+estimateMoney(marketTotal));
+$("#pkgMatrix").innerHTML = MATRIX.map(r => `<tr><td>${r[0]}</td><td class="c"><b>${r[1]}</b></td></tr>`).join("");
+["quoteMarketTotal","detailMarketTotal"].forEach(id=>document.getElementById(id).textContent="약 "+estimateMoney(marketTotal));
 
 // Agents
 (function(){
@@ -4010,6 +3974,18 @@ const li = c => `<li><span class="ok">✓</span><span>${c[0]}</span><a class="wh
 $("#fbList").innerHTML = FEEDBACK.map(li).join("");
 $("#covList").innerHTML = COVER.map(li).join("");
 $("#covCount").textContent = `요구사항 ${COVER.length}개 검토 · 조사 보완 ${FEEDBACK.length}개`;
+
+// Reveal a collapsed table when following a direct link into its contents.
+(function(){
+  function reveal(){
+    let id;try{id=decodeURIComponent(location.hash.slice(1));}catch{return;}
+    const target=document.getElementById(id);if(!target)return;
+    let parent=target.parentElement,opened=false;
+    while(parent){if(parent.tagName==="DETAILS"&&!parent.open){parent.open=true;opened=true;}parent=parent.parentElement;}
+    if(opened)requestAnimationFrame(()=>target.scrollIntoView());
+  }
+  addEventListener("hashchange",reveal);reveal();
+})();
 
 // Keep navigation aligned with the section currently being read.
 (function(){
